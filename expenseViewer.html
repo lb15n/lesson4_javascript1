@@ -78,7 +78,7 @@
           </p>
 		  <p><label for="transportationInput">
             Transportation (public transportation, parking, gas, etc.):
-              <input type="text" id="transportationInput" name="transportatuib" />
+              <input type="text" id="transportationInput" name="transportation" />
               </label>
           </p>
         </fieldset>                 
@@ -155,9 +155,9 @@
               
               var shelterAmt = document.getElementById("shelterInput").value;
               var foodAmt = document.getElementById("foodInput").value;
-			  var foodAmt = document.getElementById("householdInput").value;
-              var foodAmt = document.getElementById("otherInput").value;
-              var foodAmt = document.getElementById("transportationInput").value;
+			        var householdAmt = document.getElementById("householdInput").value;
+              var otherAmt = document.getElementById("otherInput").value;
+              var transportationAmt = document.getElementById("transportationInput").value;
 
               /*************************************************************************************************
                * Task 3:  Add the additional code needed that will convert the user's inputs, which are Strings 
@@ -219,7 +219,7 @@
                *          variables declared in Task 4.  
               *******************************************************************************************************/   
          
-
+              totalExpenses = shelterAmt + foodAmt + householdAmt + otherAmt + transportationAmt;
               shelterPct = 100 * (shelterAmt / totalExpenses);
               foodPct = 100 * (foodAmt / totalExpenses);
               householdPct = 100 * (householdAmt / totalExpenses);
